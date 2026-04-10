@@ -1,4 +1,4 @@
-import { generateApp } from "@/lib/ai";
+import { generateApp } from "../../lib/ai";
 
 export async function POST(req: Request) {
   const { prompt } = await req.json();
