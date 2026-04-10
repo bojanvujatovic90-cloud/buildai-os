@@ -1,8 +1,10 @@
 {
-  "name": "buildai-os",
+  "name": "buildai-final",
   "private": true,
   "scripts": {
-    "build": "next build"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
   "dependencies": {
     "next": "14.2.5",

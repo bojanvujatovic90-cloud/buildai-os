@@ -8,19 +8,7 @@ export async function generateApp(prompt: string) {
   const res = await openai.chat.completions.create({
     model: "gpt-4o-mini",
     messages: [
-      {
-        role: "system",
-        content: `
-Return JSON only:
-{
-  "name": string,
-  "description": string,
-  "ui": [
-    { "type": "text" | "button", "value": string }
-  ]
-}
-`
-      },
+      { role: "system", content: "Return JSON: { name: string, description: string }" },
       { role: "user", content: prompt }
     ]
   });
